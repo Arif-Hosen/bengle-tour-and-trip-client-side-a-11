@@ -8,6 +8,7 @@ const Header = () => {
 
     return (
         <div >
+            {/* react router bootstrap nav */}
             <Navbar fixed="top" expand="lg" bg="dark" variant="dark">
                 <Container fluid>
                     <Navbar.Brand as={NavLink} to="/home"><i className="fas fa-umbrella-beach me-3 ms-4"></i> Bengle Tour & Trip</Navbar.Brand>

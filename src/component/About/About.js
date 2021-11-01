@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className="mt-5 ">
 
-
+            {/* This is about page ,react bootstrap uses */}
             <Row lg={2} md={1} sm={1} className="g-4 mt-5 ">
 
                 <Col className="mt-5 ">

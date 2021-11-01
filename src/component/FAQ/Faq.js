@@ -4,8 +4,10 @@ import { Accordion, Carousel } from 'react-bootstrap';
 const Faq = () => {
     return (
         <div>
+
             <h3 className='text-center m-5 text-danger'>Frequently Asked Questions</h3>
             <div className='d-flex mt-5 mb-5 pt-5 pb-5'>
+                {/* faq section */}
                 <Accordion className='w-50 m-5 '>
 
                     <Accordion.Item eventKey="0">

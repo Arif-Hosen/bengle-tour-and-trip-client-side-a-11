@@ -4,13 +4,14 @@ import './AllBooking.css';
 const AllBooking = () => {
     const [packages, setPakages] = useState([]);
 
-
+    // get data to booking collection
     useEffect(() => {
         fetch('https://frightening-alien-79885.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => setPakages(data))
     }, [])
 
+    // delete booking collection data
     const handleDelete = (id) => {
         fetch(`https://frightening-alien-79885.herokuapp.com/booking/${id}`, {
             method: 'DELETE'

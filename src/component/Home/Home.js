@@ -8,7 +8,7 @@ import With from '../WithUs/With';
 const Home = () => {
     return (
         <div>
-
+            {/* carouser */}
             <Carousel >
                 <Carousel.Item interval={1000}>
                     <div style={{ height: '700px' }}>

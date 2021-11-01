@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Row, Button } from 'react-bootstrap';
+import { Card, Col, Row, Button, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
 const Packages = () => {
+
     const [trips, setTrips] = useState([]);
+    // load packages from trips collection of db
     useEffect(() => {
+
         fetch('https://frightening-alien-79885.herokuapp.com/trips')
             .then(res => res.json())
-            .then(data => setTrips(data));
+            .then(data => {
+                setTrips(data)
+
+            });
     }, [])
+
+
     return (
         <div>
             <h2 className=" mt-5 pt-5 text-center text-primary">Packages</h2>
@@ -40,6 +48,6 @@ const Packages = () => {
     );
 };
 
-// `/placebook/${trip._id}`
+
 
 export default Packages;

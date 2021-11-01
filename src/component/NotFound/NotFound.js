@@ -2,6 +2,7 @@ import React from 'react';
 
 const NotFound = () => {
     return (
+        // not found page
         <div className='m-5 '>
             <div className='m-5 text-center'>
                 <h1 className='mt-5 pt-5'>404 !!! Sorry Page not found</h1>

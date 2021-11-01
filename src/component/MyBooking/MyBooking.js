@@ -5,18 +5,21 @@ import './MyBooking.css';
 const MyBooking = () => {
     const [packages, setPakages] = useState([]);
     const [Mypackages, setMyPakages] = useState([]);
+    // get user from useAuth by contex api
     const { user } = useAuth();
+    // getting data from booking collection
     useEffect(() => {
         fetch('https://frightening-alien-79885.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => setPakages(data))
     }, [])
-
+    // if collection email of db and login user email is same then user can be my booking . filter data and set an state
     useEffect(() => {
         const myBook = packages.filter(pack => pack?.email == user?.email);
         setMyPakages(myBook);
     }, [packages])
 
+    // delete api
     const handleDelete = (id) => {
 
         fetch(`https://frightening-alien-79885.herokuapp.com/booking/${id}`, {
