@@ -42,7 +42,7 @@ const MyBooking = () => {
                     <tr className='my-table-head'>
                         <th scope="col">Booking Id</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Country</th>
+                        <th scope="col">Package Name</th>
                         <th scope="col">Package Id</th>
                         <th scope="col">Email</th>
                     </tr>
@@ -53,8 +53,8 @@ const MyBooking = () => {
                         Mypackages.map(singlePack => <tr className='my-table-data'>
                             <td>{singlePack._id}</td>
                             <td>{singlePack.name}</td>
-                            <td>{singlePack.description}</td>
-                            <td>{singlePack.number}</td>
+                            <td>{singlePack.packageName}</td>
+                            <td>{singlePack.packageId}</td>
                             <td>{singlePack.email}</td>
                             <td><button className='btn btn-danger' onClick={() => handleDelete(singlePack._id)}>Cancel</button></td>
                         </tr>)

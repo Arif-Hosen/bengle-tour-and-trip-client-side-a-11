@@ -34,7 +34,7 @@ const AllBooking = () => {
                     <tr className='table-head'>
                         <th scope="col">BokingId</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Country</th>
+                        <th scope="col">Package Name</th>
                         <th scope="col">Package Id</th>
                         <th scope="col">Email</th>
                     </tr>
@@ -45,8 +45,8 @@ const AllBooking = () => {
                         packages.map(singlePack => <tr className='table-data'>
                             <td>{singlePack._id}</td>
                             <td>{singlePack.name}</td>
-                            <td>{singlePack.description}</td>
-                            <td>{singlePack.number}</td>
+                            <td>{singlePack.packageName}</td>
+                            <td>{singlePack.packageId}</td>
                             <td><button className='btn btn-danger' onClick={() => handleDelete(singlePack._id)}>Delete</button></td>
                         </tr>)
                     }

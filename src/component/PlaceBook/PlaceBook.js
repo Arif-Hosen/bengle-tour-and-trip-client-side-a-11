@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../Hooks/useContext';
@@ -9,9 +9,15 @@ const PlaceBook = () => {
     const { register, handleSubmit, reset } = useForm();
     const { user } = useAuth();
 
+    const nameRef = useRef();
+    const emailRef = useRef();
+    const packageNameRef = useRef();
+    const packageIdRef = useRef();
+    const addressRef = useRef();
+
     // const [placeBooking, setPlaceBooking] = useState([]);
     const [singlePackage, setSinglePackage] = useState({});
-    // let { id } = useParams();
+
 
 
     useEffect(() => {
@@ -21,16 +27,26 @@ const PlaceBook = () => {
     }, [])
 
 
-    const onSubmit = data => {
-        console.log(data);
+    const handleBook = e => {
+        e.preventDefault();
+        const name = nameRef.current.value;
+        const email = emailRef.current.value;
+        const packageName = packageNameRef.current.value;
+        const packageId = packageIdRef.current.value;
+        const address = addressRef.current.value;
 
-        axios.post('https://frightening-alien-79885.herokuapp.com/booking', data)
+        const user = { name, email, packageName, packageId, address };
+
+
+        axios.post('https://frightening-alien-79885.herokuapp.com/booking', user)
             .then(res => {
+                console.log(res);
                 if (res.data.insertedId) {
                     alert('added successfully');
                     reset();
                 }
             })
+
     }
 
 
@@ -46,8 +62,23 @@ const PlaceBook = () => {
                     <h3>{singlePackage?.name}</h3>
                     <p>{singlePackage?.description}</p>
 
+                    <form onSubmit={handleBook}>
 
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input ref={nameRef} className='w-50 ' type="text" value={user.displayName} />
+                        <br />
+                        <input ref={emailRef} className='w-50 m-3' value={user.email} type='email' />
+                        <br />
+                        <input ref={packageNameRef} className='w-50 m-3' value={singlePackage.name} />
+                        <br />
+                        <input ref={packageIdRef} className='w-50 m-3' value={singlePackage._id} />
+                        <br />
+                        <input ref={addressRef} className='w-50 m-3' placeholder="address" />
+                        <br />
+                        <input type="submit" value="Place Booking" />
+                    </form>
+
+
+                    {/* <form onSubmit={handleSubmit(onSubmit)}>
                         <input className='w-50 m-3' value={user.displayName} {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
                         <br />
                         <input className='w-50 m-3' value={user.email} {...register("email")} placeholder="" />
@@ -59,7 +90,7 @@ const PlaceBook = () => {
                         <input className='w-50 m-3'  {...register("address")} placeholder="address" />
                         <br />
                         <input type="submit" />
-                    </form>
+                    </form> */}
 
 
                 </div>

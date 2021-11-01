@@ -10,11 +10,11 @@ const Footer = () => {
                 <Col>
 
                     <h5>Bengle Tour & Trip</h5>
-                    <p>Why us</p>
-                    <p>Why Touring</p>
-                    <p>Share your review</p>
-                    <p>Travel Insurance</p>
-                    <p>Referral program</p>
+                    <Link to="/home"> <p>Why us</p></Link>
+                    <Link to="/home"> <p>Why Touring</p></Link>
+                    <Link to="/home"> <p>Share your review</p></Link>
+                    <Link to="/home"> <p>Travel Insurance</p></Link>
+                    <Link to="/home"> <p>Referral program</p></Link>
                 </Col>
                 <Col>
 

@@ -18,9 +18,9 @@ const Home = () => {
                             alt="First slide"
                         />
                     </div>
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <Carousel.Caption className='text-light fs-5'>
+                        <h3>20+ Years of Experience</h3>
+                        <p>We are very proud to say that we can give you the best advice for your trip.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
@@ -31,12 +31,12 @@ const Home = () => {
                             alt="Second slide"
                         />
                     </div>
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <Carousel.Caption className='text-light fs-5'>
+                        <h3>Professional Local Tour Guide</h3>
+                        <p>You will be full of information with our exceptional local tour guide.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item >
                     <div style={{ height: '700px' }}>
                         <img
                             className="d-block w-100 img-fluid"
@@ -44,9 +44,9 @@ const Home = () => {
                             alt="Third slide"
                         />
                     </div>
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <Carousel.Caption className='text-light fs-5'>
+                        <h3 >Reasonable Price</h3>
+                        <p>We offer one of the most reasonable price throughout the market.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

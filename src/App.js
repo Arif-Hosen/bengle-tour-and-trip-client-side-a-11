@@ -12,6 +12,7 @@ import PlaceBook from './component/PlaceBook/PlaceBook';
 import AuthProvider from './Context/authProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import NotFound from './component/NotFound/NotFound';
+import AddPackage from './component/AddPackage/AddPackage';
 
 
 
@@ -48,6 +49,9 @@ function App() {
             </Route>
             <PrivateRoute path='/trips/:id'>
               <PlaceBook></PlaceBook>
+            </PrivateRoute>
+            <PrivateRoute path='/addpackage'>
+              <AddPackage></AddPackage>
             </PrivateRoute>
             <Route path='*'>
               <NotFound></NotFound>
