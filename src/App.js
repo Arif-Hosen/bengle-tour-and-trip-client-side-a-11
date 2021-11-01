@@ -11,13 +11,13 @@ import AllBooking from './component/AllBooking/AllBooking';
 import PlaceBook from './component/PlaceBook/PlaceBook';
 import AuthProvider from './Context/authProvider';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import NotFound from './component/NotFound/NotFound';
 
 
 
 function App() {
   return (
-    <div >
-
+    <div>
 
       <AuthProvider>
         <Router>
@@ -35,9 +35,9 @@ function App() {
               <MyBooking></MyBooking>
             </PrivateRoute>
 
-            <Route path='/allbooking'>
+            <PrivateRoute path='/allbooking'>
               <AllBooking></AllBooking>
-            </Route>
+            </PrivateRoute>
 
             <Route path='/login'>
               <Login></Login>
@@ -50,7 +50,7 @@ function App() {
               <PlaceBook></PlaceBook>
             </PrivateRoute>
             <Route path='*'>
-
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

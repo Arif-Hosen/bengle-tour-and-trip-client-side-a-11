@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import { Route, Redirect, Switch, useLocation, useHistory } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import useAuth from '../../Hooks/useContext';
 
@@ -18,7 +18,8 @@ const PrivateRoute = ({ children, ...rest }) => {
 
 
     return (
-        // private route
+
+        // private route 
         <Route
             {...rest}
             // conditionally render
@@ -32,6 +33,7 @@ const PrivateRoute = ({ children, ...rest }) => {
                 </Redirect>
             }>
         </Route>
+
 
     );
 };

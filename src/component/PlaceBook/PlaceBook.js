@@ -9,15 +9,13 @@ const PlaceBook = () => {
     const { register, handleSubmit, reset } = useForm();
     const { user } = useAuth();
 
-    console.log(id);
-
     // const [placeBooking, setPlaceBooking] = useState([]);
     const [singlePackage, setSinglePackage] = useState({});
     // let { id } = useParams();
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/trips/${id}`)
+        fetch(`https://frightening-alien-79885.herokuapp.com/trips/${id}`)
             .then(res => res.json())
             .then(data => setSinglePackage(data));
     }, [])
@@ -26,7 +24,7 @@ const PlaceBook = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/booking', data)
+        axios.post('https://frightening-alien-79885.herokuapp.com/booking', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -44,7 +42,7 @@ const PlaceBook = () => {
     return (
         <div className='m-5  text-center'>
             <div className='d-flex m-5 p-5'>
-                <div className='p-5'>
+                <div className=''>
                     <h3>{singlePackage?.name}</h3>
                     <p>{singlePackage?.description}</p>
 
@@ -54,9 +52,9 @@ const PlaceBook = () => {
                         <br />
                         <input className='w-50 m-3' value={user.email} {...register("email")} placeholder="" />
                         <br />
-                        <input className='w-50 m-3' value={singlePackage?.name} {...register("packagename")} placeholder="" />
+                        <input className='w-50 m-3' value={singlePackage.name} {...register("description", { required: true })} />
                         <br />
-                        <input className='w-50 m-3' value={singlePackage._id} {...register("packageid")} />
+                        <input className='w-50 m-3' value={singlePackage._id} {...register("number", { required: true })} />
                         <br />
                         <input className='w-50 m-3'  {...register("address")} placeholder="address" />
                         <br />

@@ -20,6 +20,7 @@ const Login = () => {
                 // console.log(res)
                 history.push(location.state?.from)
             })
+
     }
 
     return (

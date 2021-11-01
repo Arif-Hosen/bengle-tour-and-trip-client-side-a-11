@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import './AllBooking.css';
 
 const AllBooking = () => {
     const [packages, setPakages] = useState([]);
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/booking')
+        fetch('https://frightening-alien-79885.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => setPakages(data))
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/booking/${id}`, {
+        fetch(`https://frightening-alien-79885.herokuapp.com/booking/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
-                    alert('Do you Confirm??');
+                    alert('Are you Confirm??');
                     const remaining = packages.filter(user => user._id !== id);
                     setPakages(remaining);
                 }
@@ -26,26 +27,27 @@ const AllBooking = () => {
     }
 
     return (
-        <div className='mt-5 pt-5'>
+        <div className='all-booking mt-5 pt-5 p-5'>
 
             <table class="table">
                 <thead>
-                    <tr>
+                    <tr className='table-head'>
                         <th scope="col">BokingId</th>
                         <th scope="col">Name</th>
                         <th scope="col">Country</th>
+                        <th scope="col">Package Id</th>
                         <th scope="col">Email</th>
                     </tr>
                 </thead>
                 <tbody>
 
                     {
-                        packages.map(singlePack => <tr>
+                        packages.map(singlePack => <tr className='table-data'>
                             <td>{singlePack._id}</td>
                             <td>{singlePack.name}</td>
-                            <td>{singlePack.packagename}</td>
-                            <td>{singlePack.email}</td>
-                            <td><button onClick={() => handleDelete(singlePack._id)}>Cancel</button></td>
+                            <td>{singlePack.description}</td>
+                            <td>{singlePack.number}</td>
+                            <td><button className='btn btn-danger' onClick={() => handleDelete(singlePack._id)}>Delete</button></td>
                         </tr>)
                     }
 

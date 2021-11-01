@@ -17,7 +17,7 @@ const Packages = () => {
             <Row lg={2} md={1} sm={1} className="g-5 m-5">
 
                 {
-                    trips.map(trip => <Col>
+                    trips.map(trip => <Col key={trip._id}>
                         <Card>
                             <Card.Img variant="top" src={trip.img} />
                             <Card.Body>

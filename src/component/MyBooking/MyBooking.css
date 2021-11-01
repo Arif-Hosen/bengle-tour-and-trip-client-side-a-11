@@ -1,0 +1,19 @@
+.my-table-head{
+    color:tomato;
+}
+
+
+
+.my-booking{
+    
+    background-image: linear-gradient(rgba(1, 19, 8, 0.527), rgba(29, 27, 24, 0.582)),
+    url("https://image.freepik.com/free-photo/modern-futuristic-sci-fi-background_35913-2152.jpg");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+.my-table-data{
+    color:khaki;
+    font-weight: 700;
+}
