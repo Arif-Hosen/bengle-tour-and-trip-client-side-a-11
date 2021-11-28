@@ -1,0 +1,9 @@
+.log{
+    
+    background-image: linear-gradient(rgba(153, 190, 167, 0.527), rgba(99, 109, 133, 0.582)),
+    url("https://image.freepik.com/free-photo/smoke-background-texture-white-abstract-design_53876-128269.jpg");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+

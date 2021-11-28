@@ -1,0 +1,10 @@
+.package-card:hover .trip-name{
+color: rgb(4, 93, 165);
+}
+.package-card:hover{
+    border: 1px solid lightslategray;
+}
+.rate{
+    color: gold;
+    
+}

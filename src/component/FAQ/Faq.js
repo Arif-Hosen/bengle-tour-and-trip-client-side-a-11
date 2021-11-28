@@ -45,8 +45,8 @@ const Faq = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Coxs Bazar, BD</h3>
+                            <p>Coxs Bazar Beach, located at Coxs Bazar, Bangladesh, is the longest natural sea beach in the world running 150 kilometres </p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -57,8 +57,9 @@ const Faq = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>Indonesia</h3>
+                            <p>Indonesia tour packages include visit to countrys popular cities including Jakarta, which is the capital city of Indonesia and largest in the country.
+                            </p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -69,8 +70,8 @@ const Faq = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h3>Australia</h3>
+                            <p>Travel is the perfect way to meet new friends and try something new. Join with us and explore Australia.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useContext';
-
+import './Login.css';
 
 
 const Login = () => {
@@ -24,9 +24,9 @@ const Login = () => {
     }
 
     return (
-        <div className='mt-5'>
+        <div className='mt-5 log'>
 
-            <div className='text-center'>
+            <div className='text-center '>
                 <h3 className='pt-5 m-5 text-center text-primary'>SignIn with Google</h3>
                 <button onClick={googleHandler} type="submit" className="btn btn-warning w-25 mx-auto">Google Sign In</button>
                 <p className='m-5'>--------------------------------</p>
@@ -34,9 +34,9 @@ const Login = () => {
 
 
 
-            <form className='w-25 mx-auto'>
+            <form className='w-25 mx-auto pb-5'>
 
-                <div className="mb-3">
+                <div className="mb-3 ">
                     <label for="exampleInputEmail1" className="form-label">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>

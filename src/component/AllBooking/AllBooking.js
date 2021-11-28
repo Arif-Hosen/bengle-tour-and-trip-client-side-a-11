@@ -28,7 +28,7 @@ const AllBooking = () => {
     }
 
     return (
-        <div className='all-booking mt-5 pt-5 p-5'>
+        <div className='container-fluid all-booking mt-5 pt-5 p-5'>
 
             <table class="table">
                 <thead>
@@ -45,9 +45,11 @@ const AllBooking = () => {
                     {
                         packages.map(singlePack => <tr className='table-data'>
                             <td>{singlePack._id}</td>
+                            <td>{singlePack.user}</td>
                             <td>{singlePack.name}</td>
-                            <td>{singlePack.packageName}</td>
-                            <td>{singlePack.packageId}</td>
+                            <td>{singlePack.id}</td>
+                            <td>{singlePack.email}</td>
+                            <td><button className='btn btn-success' >Approve</button></td>
                             <td><button className='btn btn-danger' onClick={() => handleDelete(singlePack._id)}>Delete</button></td>
                         </tr>)
                     }

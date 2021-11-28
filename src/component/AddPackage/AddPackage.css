@@ -1,0 +1,25 @@
+.add-package{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(rgba(1, 19, 8, 0.527), rgba(29, 27, 24, 0.582)),
+    url("https://image.freepik.com/free-photo/perspective-exterior-nobody-empty-box_1258-260.jpg");
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+.package-part{
+    border: 1px solid burlywood;
+    background-color:darkslategrey;
+    border-radius: 5px;
+}
+.package-part input{
+    border-radius: 5px;
+    
+    border: 1px solid lightgray;
+}
+.package-part textarea{
+    border-radius: 5px;
+}

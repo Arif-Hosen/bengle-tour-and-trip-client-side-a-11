@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 
 const About = () => {
     return (
-        <div className="mt-5 ">
+        <div className="mt-5 container-fluid">
 
             {/* This is about page ,react bootstrap uses */}
             <Row lg={2} md={1} sm={1} className="g-4 mt-5 ">

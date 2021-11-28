@@ -7,7 +7,7 @@ import With from '../WithUs/With';
 
 const Home = () => {
     return (
-        <div>
+        <div className='container-fluid'>
             {/* carouser */}
             <Carousel >
                 <Carousel.Item interval={1000}>

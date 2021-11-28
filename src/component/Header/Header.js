@@ -11,7 +11,7 @@ const Header = () => {
             {/* react router bootstrap nav */}
             <Navbar fixed="top" expand="lg" bg="dark" variant="dark">
                 <Container fluid>
-                    <Navbar.Brand as={NavLink} to="/home"><i className="fas fa-umbrella-beach me-3 ms-4"></i> Bengle Tour & Trip</Navbar.Brand>
+                    <Navbar.Brand as={NavLink} to="/home"><i className="fas text-primary fa-umbrella-beach me-2 ms-4"></i> Bengle Tour & Trip</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -37,6 +37,7 @@ const Header = () => {
                             {/* if have email, display  loguout and name , if not display login nav*/}
                             {user.email ?
                                 <span className='ms-4'>
+                                    <img style={{ width: '40px', paddingRight: '5px', borderRadius: '50%' }} src={user.photoURL} alt="" />
                                     <small className='text-light'>{user.displayName}</small>
                                     <button style={{ color: 'blue', border: ' 1px solid blue', borderRadius: ' 5px', marginLeft: '5px' }} onClick={logOut}>Logout</button>
                                 </span>

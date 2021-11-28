@@ -27,8 +27,10 @@ const MyBooking = () => {
         })
             .then(res => res.json())
             .then(data => {
+                // after data load ,we get deletedCount property from server response
                 if (data.deletedCount > 0) {
-                    alert('Are you sure you wish to delete this item?')
+                    alert('Are you sure you wish to cancel booking ???')
+                    // condition check if clicked data's id didn't match mypakages id, it will be added Mypackages state
                     const remaining = Mypackages.filter(user => user._id !== id);
                     setMyPakages(remaining);
 
@@ -55,11 +57,11 @@ const MyBooking = () => {
                     {
                         Mypackages.map(singlePack => <tr className='my-table-data'>
                             <td>{singlePack._id}</td>
+                            <td>{singlePack.user}</td>
                             <td>{singlePack.name}</td>
-                            <td>{singlePack.packageName}</td>
-                            <td>{singlePack.packageId}</td>
+                            <td>{singlePack.id}</td>
                             <td>{singlePack.email}</td>
-                            <td><button className='btn btn-danger' onClick={() => handleDelete(singlePack._id)}>Cancel</button></td>
+                            <td><button className='btn btn-danger' onClick={() => handleDelete(singlePack._id)}>Cancel Booking</button></td>
                         </tr>)
                     }
 
